@@ -9,8 +9,14 @@
     --color-orange: #E7A127;
     --color-brown: #FBCB79;
     --color-cream: #FFECCC;
+    --color-pink: #EB7D7D;
+    --color-cyan: #F7FBFF;
+    --color-gray: #C0C4C9;
+    --color-ultra-blue: #3B4CE2;
+    --color-dark-gray: #333333;
 
-    --font-raleway: raleway;
+    --font-raleway: Raleway;
+    --font-oswald: Oswald;
 }
 
 ::-webkit-scrollbar {
@@ -102,7 +108,9 @@
 }
 
 .container {
-    padding: 120px 180px 80px 180px;
+    background: var(--color-cyan);
+    padding: 80px 180px 80px 180px;
+    font-family: var(--font-raleway);
 }
 
 .container__statistic {
@@ -131,6 +139,7 @@
 }
 
 .hot__words {
+    padding-top: 35px;
     font-family: Oswald, sans-serif;
     font-size: 42px;
     font-weight: 600;
@@ -212,4 +221,213 @@
 .stat__num {
     font-size: 62px;
     font-weight: 600;
+}
+
+.main__title {
+    text-align: center;
+    font-family: var(--font-oswald);
+    color: var(--color-red);
+}
+
+.title {
+    padding-bottom: 20px;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.underscore {
+    margin: 0 auto 40px auto;
+    height: 1.5px;
+    width: 120px;
+    background: var(--color-red);
+}
+
+.wrapper__inline {
+    display: flex;
+}
+
+.card__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img__description {
+    width: 270px;
+    height: 490px;
+    background: var(--color-orange);
+}
+
+.card__img {
+    width: 100%;
+}
+
+.img__description > p {
+    width: 220px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.title__company {
+    color: var(--color-pink);
+}
+
+.water__words {
+    margin-left: 50px;
+    font-size: 18.5px;
+    font-weight: 300;
+    line-height: 1.3em;
+}
+
+.big__img__words {
+    width: 785px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: #FFF;
+    background: url(../src/img/card5.jpg);
+    background-size: cover !important;
+}
+
+.big__img__titile {
+    padding-left: 70px;
+
+    font-family: var(--font-oswald);
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.big__img__desc {
+    padding-left: 70px;
+    padding-bottom: 40px;
+
+    font-size: 17.5px;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+.small__img {
+    width: 360px;
+    height: 290px;
+
+    background-size: cover !important;
+}
+
+.another__titile {
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: var(--font-oswald);
+    text-align: center;
+    color: #FFF;
+}
+
+.title__description {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 19px;
+    font-family: var(--font-raleway);
+    font-weight: 300;
+}
+
+.icon__and__text {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.icon__wrap {
+    padding-right: 20px;
+}
+
+.icon {
+    scale: 2;
+    color: var(--color-orange);
+}
+
+.icon__and__text:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+
+.text__title {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--color-orange);
+}
+
+.text__desc {
+    margin-top: 25px;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.contact__form {
+    display: flex;
+    width: 330px;
+    padding: 40px 35px;
+    background-color: #FFF;
+}
+
+.form__title {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.title__and__input input:focus {
+    border-bottom: 1px var(--color-ultra-blue) solid;
+}
+
+.input__title {
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.input__form {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+
+    font-family: var(--font-raleway);
+    font-weight: 200;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-bottom: 1px var(--color-gray) solid;
+}
+
+.form__btn {
+    margin-top: 20px;
+    padding: 15px 0;
+    width: 100%;
+
+    color: #FFF;
+    background-color: var(--color-red);
+
+    font-weight: 500;
+    font-size: 16.5px;
+
+    border: none;
+    cursor: pointer;
+}
+
+.form_ps {
+    padding-top: 18px;
+
+    color: var(--color-dark-gray);
+
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.form_ps a {
+    color: var(--color-red);
 }
