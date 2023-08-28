@@ -285,12 +285,125 @@
     <div class="container">
 
         <div class="main__title">
-            <p class="title">Отзывы клиентов <span>нашкй компании</span></p>
+            <p class="title">Отзывы клиентов <span class="title__company">нашей компании</span></p>
             <div class="underscore"></div>
-            <p class="sub__title">Бесплатно подберем для вас лучший частный дом от более чем 120 проверенных застройщиков</p>
+            <p class="another__sub__title">Бесплатно подберем для вас лучший частный дом от более чем 120 проверенных застройщиков</p>
         </div>
 
-        <h1>#ToDo:Сделать карусель с фотками</h1>
+        <div class="carousel__box">
+
+            <div id="imgsLine" class="carousel__imgs">
+                <div id="img1" class="carousel__img" style="background-image: url(src/img/bg1.jpg)"></div>
+                <div id="img2" class="carousel__img" style="background-image: url(src/img/bg2.jpg)"></div>
+                <div id="img3" class="carousel__img" style="background-image: url(src/img/bg3.jpg)"></div>
+                <div id="img4" class="carousel__img" style="background-image: url(src/img/bg4.jpg)"></div>
+            </div>
+
+
+            <div class="carousel__box__ui">
+                <div class="dots">
+                    <div id="dot1" class="dot active__dot"></div>
+                    <div id="dot2" class="dot"></div>
+                    <div id="dot3" class="dot"></div>
+                    <div id="dot4" class="dot"></div>
+                </div>
+                <div class="movement">
+                    <div class="go__left">
+                        <i class="movement__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M15 6l-6 6l6 6"></path>
+                             </svg>
+                        </i>
+                    </div>
+                    <div class="go__right">
+                        <i class="movement__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 6l6 6l-6 6"></path>
+                             </svg>
+                        </i>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <script>
+                let leftBtn = document.querySelector('.carousel__box__ui .movement .go__left');
+                let rightBtn = document.querySelector('.carousel__box__ui .movement .go__right');
+                let images = document.querySelectorAll('#imgsLine div');
+                let imagesLine = document.getElementById('imgsLine');
+                let imageWidth = imagesLine.offsetWidth;
+                let imageLineWidth = imagesLine.scrollWidth;
+                let imageScroll = 0;
+                let imageCounter = 0;
+                let lastDot = 0;
+
+                let dots = [
+                    document.getElementById('dot1'),
+                    document.getElementById('dot2'),
+                    document.getElementById('dot3'),
+                    document.getElementById('dot4')
+                ];
+
+                leftBtn.addEventListener("click", (event) => {
+
+                    lastDot = imageCounter;
+                    imageWidth = imagesLine.offsetWidth;
+                    imageLineWidth = imagesLine.scrollWidth - imageWidth;
+
+                    if(!(imageScroll >= 0 && lastDot <= 0)) {
+                        imageScroll += imageWidth;
+                        imagesLine.style.transform = `translateX(${imageScroll}px)`;
+                        imageCounter--;
+                        dots[imageCounter].classList.add('active__dot');
+                        dots[lastDot].classList.remove('active__dot');
+                    } else if (lastDot <= 1) {
+                        imageCounter = 3;
+                        imageScroll = -imageLineWidth;
+                        imagesLine.style.transform = `translateX(${imageScroll}px)`;
+                        dots[imageCounter].classList.add('active__dot');
+                        dots[lastDot].classList.remove('active__dot');
+                    } else {
+                        imageCounter = 3;
+                        imageScroll = -imageLineWidth;
+                        imagesLine.style.transform = `translateX(${imageScroll}px)`;
+                        dots[imageCounter].classList.add('active__dot');
+                        dots[lastDot].classList.remove('active__dot');
+                    }
+
+                    console.log("lastDot:" + lastDot);
+                    console.log("imageWidth:" + imageWidth);
+                    console.log("imageLineWidth:" + imageLineWidth);
+                    console.log("imageCounter:" + imageCounter);
+
+                })
+
+                rightBtn.addEventListener("click", (event) => {
+                    lastDot = imageCounter;
+                    imageWidth = imagesLine.offsetWidth;
+                    imageLineWidth = imagesLine.scrollWidth;
+                    
+                    if (!(imageCounter >= 3)) {
+                        imageWidth = imagesLine.offsetWidth;
+                        imageScroll -= imageWidth;
+                        imagesLine.style.transform = `translateX(${imageScroll}px)`;
+                        imageCounter++;
+                        dots[imageCounter].classList.add('active__dot');
+                        dots[lastDot].classList.remove('active__dot');
+                    } else {
+                        imageCounter = 0;
+                        imageScroll = 0;
+                        imagesLine.style.transform = `translateX(${imageScroll}px)`;
+                        dots[imageCounter].classList.add('active__dot');
+                        dots[lastDot].classList.remove('active__dot');
+                    }
+                })
+            </script>
+
+        </div>
 
     </div><!--container 7-->
 
