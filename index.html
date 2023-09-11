@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -324,9 +325,6 @@
                              </svg>
                         </i>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -336,15 +334,15 @@
     <div class="container">
 
         <div class="main__title">
-            <p class="title">Команда профессионалов <span>по недвижимости</span></p>
+            <p class="title">Команда профессионалов <span class="title__company">по недвижимости</span></p>
             <div class="underscore"></div>
-            <p class="sub__title">Бесплатно подберем для вас дом мечты от более чем 120 проверенных застройщиков</p>
+            <p class="another__sub__title">Бесплатно подберем для вас дом мечты от более чем 120 проверенных застройщиков</p>
         </div>
 
-        <div class="wrapper__inline">
+        <div id="wrapper__contacts" class="wrapper__inline" style="padding-top: 45px;">
             <div class="contact__item">
                 <div class="contact__photo">
-                    <img src="" alt="img">
+                    <img src="src/img/img2.jpg" alt="img">
                 </div>
                 <p class="contact__name">Марк</p>
                 <p class="contact__desc">Риэлтор с 20-летним стажем. Ведущий сотрудник компании</p>
@@ -352,7 +350,7 @@
 
             <div class="contact__item">
                 <div class="contact__photo">
-                    <img src="" alt="img">
+                    <img src="src/img/img3.jpg" alt="img">
                 </div>
                 <p class="contact__name">Омар</p>
                 <p class="contact__desc">Риэлтор с 20-летним стажем. Ведущий сотрудник компании</p>
@@ -360,7 +358,7 @@
 
             <div class="contact__item">
                 <div class="contact__photo">
-                    <img src="" alt="img">
+                    <img src="src/img/img4.jpg" alt="img">
                 </div>
                 <p class="contact__name">Дмитрий</p>
                 <p class="contact__desc">Риэлтор с 20-летним стажем. Ведущий сотрудник компании</p>
@@ -368,7 +366,7 @@
 
             <div class="contact__item">
                 <div class="contact__photo">
-                    <img src="" alt="img">
+                    <img src="src/img/img5.jpg" alt="img">
                 </div>
                 <p class="contact__name">Артём</p>
                 <p class="contact__desc">Риэлтор с 20-летним стажем. Ведущий сотрудник компании</p>
@@ -377,31 +375,53 @@
 
     </div><!--container 8-->
 
-    <div class="container">
+    <div class="container" style="background: linear-gradient(#ffffffc5, #ffffffc5),  url(src/img/bg6.jpg), no-repeat !important; background-position: center !important; background-size: cover !important">
 
         <div class="main__title">
             <p class="title">По всем вопросам звоните: +7 800 554 45 56</p>
-            <p class="sub__title">Чебоксары, Школьный проезд 1, e-mail: test@yandex.ru, телефон: 8 800 300 06 00</p>
+            <p class="another__sub__title" style="color: var(--color-red);">Чебоксары, Школьный проезд 1, e-mail: test@yandex.ru, телефон: 8 800 300 06 00</p>
         </div>
 
-        <h1>#ToDo:Вставить карту Яндекса</h1>
+        <div class="map__container">
+            <div id="yandex--map" class="yandex__map">
+                
+            </div>
+            <div class="map__info">
+                <div class="desc">
+                    <p class="title">Связаться с нами</p>
+                    <p><span class="desc__bold">E-mail:</span>  Test@yandex.ru</p>
+                    <p><span class="desc__bold">Телефон:</span> 8 800 300 06 00 отдела продаж</p>
+                    <p><span class="desc__bold">Телефон:</span> 8 800 340 06 00 отдела сбыта</p>
+                    <p><span class="desc__bold">Контактное лицо:</span> Степанов В.И.</p>
+                </div>
+
+                <div class="desc">
+                    <p class="title">Офисы продаж</p>
+                    <p><span class="desc__bold">Адрес:</span> г. Чебоксары. ул. Ленина 1</p>
+                    <p><span class="desc__bold">Телефон:</span> 8 800 300 06 00 отдела продаж</p>
+                    <p><span class="desc__bold">Телефон:</span> 8 800 340 06 00 отдела сбыта</p>
+                    <p><span class="desc__bold">Контактное лицо:</span> Степанов В.И.</p>
+                </div>
+            </div>
+        </div>
 
     </div><!--container 9-->
 
     <footer>
-        <div class="wrapper__inline">
+        <div class="nav__info">
             <div class="slogan">
-                <p>Продажа частных домов Работаем с 2001 года</p>
+                <p>Продажа частных домов<br>Работаем с 2001 года</p>
             </div>
             <div class="logo">
                 <p>Native HOME</p>
             </div>
             <div class="phone_btn">
-                <p class="footer__phone">8 800 333 22 33</p>
-                <button>Заказать звонок</button>
+                <p class="phone --red__text"><span class="--pink__text">8 800</span>333 22 33</p>
+                <button class="btn">Заказать звонок</button>
             </div>
         </div>
     </footer><!--footer-->
 </body>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
 <script src="js/main.js"></script>
 </html>

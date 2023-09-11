@@ -20,8 +20,10 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px !important;
 }
+
+
 
 ::-webkit-scrollbar-track {
     background-color: #FFF;
@@ -31,6 +33,11 @@
     background: #59CDFC;
     border-radius: 3.5px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.transition__and__scale {
+    transform: scale(1.07);
+    transition: 8s !important;
 }
 
 .nav{
@@ -453,7 +460,7 @@
 
 @media (max-width: 1500px) {
     .carousel__box {
-        width:720px;
+        width:800px;
         height: 600px;
     }
 }
@@ -486,13 +493,15 @@
 
     background-position: center;
     background-size: cover;
+
+    transition: 2s;
 }
 
 .carousel__box__ui {
     height: 50px;
     width: 100px;
     display: flex;
-    margin-right: 80px;
+    margin-right: 120px;
     align-items: center;
 
     justify-self: end;
@@ -541,6 +550,7 @@
 }
 
 .go__left {
+    margin-right: 25px;
     height: fit-content;
     width: fit-content;
     cursor: pointer;
@@ -549,4 +559,127 @@
     height: fit-content;
     width: fit-content;
     cursor: pointer;
+}
+
+.carousel__title {
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+    background-color: #305483;
+}
+
+#wrapper__contacts .contact__item:first-child .contact__name{
+    font-weight: 500;
+}
+
+.contact__item {
+    margin-right: 20px;
+}
+
+@media (max-width: 1500px) {
+
+    .img__description {
+        width: 200px;
+        height: 300px;
+    }
+
+    .img__description img{
+        width: 200px;
+        height: 250px;
+    }
+
+    .contact__photo img {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .img__description {
+        width: 100px;
+        height: 200px;
+    }
+
+    .contact__photo img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .img__description img{
+        width: 100px;
+        height: 150px;
+    }
+}
+
+.contact__item:nth-last-child(1){
+    margin-right: 0;
+}
+
+.contact__name {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    font-family: var(--font-raleway);
+    font-size: 24px;
+    font-weight: 200;
+
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.contact__desc {
+    font-weight: 500;
+}
+
+.map__container {
+    display: flex;
+    height: 460px;
+    width: 100%;
+    margin: 25px auto 0 auto;
+
+    background-color: #FFF;
+}
+
+.yandex__map {
+    height: 100%;
+    width: 60%;
+}
+
+.ymaps-2-1-79-map {
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+.ymaps-2-1-79-map:hover {
+    filter: none;
+    transition: 0.2s;
+}
+
+.map__info {
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+.map__info .desc .title {
+    font-family: var(--font-oswald);
+    font-size: 20px;
+    color: var(--color-pink);
+}
+
+.desc {
+    padding-bottom: 25px;
+    line-height: 1.5em;
+}
+
+.desc__bold {
+    font-weight: 500;
+}
+
+.--red__text{
+    color: var(--color-red);
+}
+
+.--pink__text{
+    color: var(--color-pink);
 }
